@@ -10,5 +10,5 @@ export default {
 const callback = action("accordion mode change event fired");
 
 export const ChangeMode = () => {
-    return <UncontrolledAccordion titleValue={"Users"} collapsed/>
+    return <UncontrolledAccordion titleValue={"Users"}/>
 };
