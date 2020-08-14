@@ -13,7 +13,10 @@ type AccordionPropsType = {
     onClick: (value:any)=> void
 }
 
-export function Accordion(props: AccordionPropsType) {
+
+const Accordion = React.memo(AccordionSecret)
+
+export function AccordionSecret(props: AccordionPropsType) {
     console.log("UncontrolledAccordion rendered")
     return <div>
         <AccordionTitle title={props.titleValue}
