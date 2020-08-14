@@ -26,7 +26,7 @@ export const Example1 = () => {
     }
 
     const addUser = () => {
-        const newUsers: any = prompt("Name?" + new Date().getTime());
+        const newUsers: any = prompt("Name?");
         setUsers([...users, newUsers]);
     }
 
