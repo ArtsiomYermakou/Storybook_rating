@@ -47,32 +47,10 @@ export const SetTimeOutExample = () => {
         }, 1000000);
 
     })
-    const Time = () => {
-        let a = new Date();
-
-
-
-        const hours = a.getHours()
-        const minutes = a.getMinutes()
-        const seconds = a.getSeconds()
-
-        setInterval(() => {
-
-        }, 1000);
-
-        return (
-            <>
-                {`Время: ${hours}: ${minutes}: ${seconds} `}
-                </>
-        )
-
-
-    }
 
 
     return <>
         Hello, counter: {counter} - fake: {fake}<hr/>
-        <Time/>
         {/*<button onClick={() => setCounter(counter + 1)}>counter+</button>*/}
         {/*<button onClick={() => setFake(fake + 1)}>fake+</button>*/}
     </>
