@@ -47,12 +47,45 @@ export const SetTimeOutExample = () => {
         }, 1000000);
 
     })
+    return <>
+        Hello, counter: {counter} - fake: {fake}
+        <hr/>
+    </>
+}
 
+export const ResetEffectExample = () => {
+    const [counter, setCounter] = useState(1);
+
+    console.log("Rendered");
+
+    useEffect(() => {
+        console.log("effect done " + counter);
+
+        return () => {
+            console.log("Reset Effect");
+        }
+    }, [counter])
+
+    const increase = () => {setCounter(counter + 1)}
 
     return <>
-        Hello, counter: {counter} - fake: {fake}<hr/>
-        {/*<button onClick={() => setCounter(counter + 1)}>counter+</button>*/}
-        {/*<button onClick={() => setFake(fake + 1)}>fake+</button>*/}
+        Hello, counter: {counter} <button onClick={increase}>+</button>
+    </>
+}
+
+export const KeysTrackerExample = () => {
+    const [text, setText] = useState(1);
+
+    console.log("Rendered " + text);
+
+    useEffect(() => {
+        window.addEventListener("keypress", (e) => {
+            console.log(e.key);
+        })
+    }, [])
+
+    return <>
+        Hello, counter: {text}
     </>
 }
 
